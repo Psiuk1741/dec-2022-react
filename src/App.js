@@ -102,9 +102,10 @@ let rickAndMorty = [
 function App() {
   return (
       <div>
-            <Simpson xxx={simpsons}/>
+          {simpsons.map(value=> (<Simpson xxx={value}/>))}
             <hr/>
             <RickAndMorty asd={rickAndMorty}/>
+
       </div>
   );
 }

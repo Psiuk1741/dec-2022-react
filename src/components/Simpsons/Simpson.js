@@ -1,21 +1,15 @@
 import React from 'react';
 
-const Simpson = (props) => {
-   let simpsons = props.xxx;
+const Simpson = ({xxx}) => {
     return (
         <div>
-            {
-                simpsons.map(val => (
-                    <div>
-                    <div>Name of character - {val.name}</div>
-                    <div>Surname of character - {val.surname}</div>
-                    <div>Info - {val.info}</div>
-                    <div>Age - {val.age} </div>
-                    <img src={val.photo}></img>
-
-                    </div>
-                ))
-            }
+            <div>
+                <div>Name of character - {xxx.name}</div>
+                <div>Surname of character - {xxx.surname}</div>
+                <div>Info - {xxx.info}</div>
+                <div>Age - {xxx.age} </div>
+                <img src={xxx.photo}></img>
+            </div>
         </div>
     );
 };
