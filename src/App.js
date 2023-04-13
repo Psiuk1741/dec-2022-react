@@ -23,6 +23,7 @@ import {useState} from "react";
 import FullPost from "./components/FullPost/FullPost";
 import Shuttles from "./components/Shuttles/Shuttles";
 import Users from "./components/Users/Users";
+import UsersPosts from "./components/UsersPosts/UsersPosts";
 
 function App() {
 
@@ -49,15 +50,21 @@ function App() {
         //     }
         // </div>
 
-
         // <div>
         //     <Shuttles/>
         // </div>
 
         <div>
-
-            <Users/>
-
+            <div className={'left-side'}>
+                <Users setChosenPost={setChosenPost}/>
+            </div>
+            {
+                chosenPost
+                &&
+                (<div className={'right-side'}>
+                    <UsersPosts chosenPost={chosenPost}/>
+                </div>)
+            }
         </div>
     );
 }
