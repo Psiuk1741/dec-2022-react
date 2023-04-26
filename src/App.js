@@ -1,8 +1,18 @@
+import {useState, useReducer} from "react";
+import {Posts} from "./components/Posts";
+import {Comments} from "./components/Comments";
+import Reducer from "./components/Reducer";
+
 
 function App() {
+
+
   return (
     <div>
-      Hello
+      {/*<Posts/>*/}
+      {/*  <Comments/>*/}
+        <Reducer/>
+
     </div>
   );
 }
